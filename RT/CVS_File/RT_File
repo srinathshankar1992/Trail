@@ -1,0 +1,33 @@
+Follow the steps to generate RT Report:
+
+1.Login to .22 server
+2.traverse to cd /usr/ie/osb/logs
+3.Check for the logs
+3.1 If we need to generate RT report for the current date copy "soalogs" to a folder in the same directory(cd /usr/ie/osb/logs) in the format(System.log.2019-08-02.1)
+3.2 zip the destination file created using gzip command(ex: gzip System.log.2019-08-02.1)
+4.If Report to be generated for previous days, check weather the logs are saved with the dates you ae looking for in the path(cd /usr/ie/osb/logs) it will be saved in this format(System.log.2019-08-02.1)
+5.if logs are not present in (cd /usr/ie/soa/logs) hit a request in both the servers(.22 and .23) . Folder will be created in the above format (System.log.2019-08-02.1).
+6.Traverse to "cd /usr/ie/mis_log_archive/ManagedServer/Services_Logs" and create a directory using mkdir command(mkdir 20190213).
+NOTE: directory name should be future date as the sacript will take future date(current date +1) directory to get the logfile inside it.
+7.Traverse to cd /usr/ie/osb/logs and copy the logs to the destination (/usr/ie/mis_log_archive/ManagedServer/Services_Logs/directoryname)
+ex: cp System.log.2019-08-02.1 /usr/ie/mis_log_archive/ManagedServer/Services_Logs/2019082019
+
+
+
+8.Go to the directry (cd 2019082019)
+9.zip the folder (ex: gzip System.log.2019-08-02.1)
+10.Traverse to cd /export/home/wlapp/tools/jobs/Statistics_Report_Scripts
+11.Type ./soa_daily_report_nob.pl and enter the date for which the RT needs to be generated.(ex: ./soa_daily_report_nob.pl 13/08/2019)
+12.Go to winscp , traverse to "Go to log location /export/home/wlapp/tools/jobs/Statistics_Report_Scripts/logs " copy the file to local. Find the standard sample RT template in cvs(give the path)
+13.copy the success transactions in "Service_Statistics" page. and refresh the first row of the column service name so that Sum of Total Requests	Average of Min Time (ms)	Average of Max Time (ms)	Average of Avg Time (ms) fieilds will be updated based on the copied transactins.
+14.Go to consumer statistics page , refresh the firrst row of the column "Application"
+15.Go to TPS Pivot refresh the first row of the column "Time"
+16.Go to "Fault" tab , copy the fault transactions from the report generated , refresh the first row of columns "sum of count"(for all V,E and F columns)
+17.Go to Fault Pivot page ,refresh the first row of the column "Time"
+18.Repeat the steps for.23 server and merge generated report of 22 and 23 servers.
+
+
+ 
+
+
+

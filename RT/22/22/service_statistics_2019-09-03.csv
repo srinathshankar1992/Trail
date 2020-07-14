@@ -1,0 +1,37 @@
+Server,Transactions
+ieo2wlzsoax01/10.142.4.18/soa_server1,438
+Total,438
+
+Date,Time,Application,Service,No. of Requests,Min Time(ms),Max Time(ms),Avg Time(ms)
+03/09/2019,07:00,test11,ProductOrderingManagement_V1_0.getOrder,3,6878,9364,8442
+03/09/2019,07:00,thbs,SubscriptionManagement_V1_0.getSubscription,1,5276,5276,5276
+03/09/2019,07:15,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,55,693,4901,1832
+03/09/2019,07:15,thbs,ProductOrderingManagement_V1_0.modifyOrder,1,4008,4008,4008
+03/09/2019,07:30,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,4,1262,3377,1995
+03/09/2019,10:30,test11,SubscriptionManagement_V1_0.getSubscription,77,539,5282,1094
+03/09/2019,10:45,test11,SubscriptionManagement_V1_0.getSubscription,76,524,2543,974
+03/09/2019,12:00,test11,SubscriptionManagement_V1_0.getSubscription,73,501,2487,854
+03/09/2019,13:30,THBS,SubscriptionManagement_V1_0.getAccount,3,1278,4388,2709
+03/09/2019,13:45,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,1,2752,2752,2752
+03/09/2019,14:00,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,36,1079,3553,1899
+03/09/2019,14:00,test11,SubscriptionManagement_V1_0.getSubscription,100,490,5257,837
+03/09/2019,14:30,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,5,897,2606,1794
+03/09/2019,14:45,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,2,1267,1434,1350
+03/09/2019,15:15,UNKNOWN,ManageAddOn_1_0.removeAddOn_2,1,1759,1759,1759
+
+Service Name,Cache hits,Cache misses,%ge of hit 
+
+Date,Time,Service,Error,Count
+03/09/2019,07:15,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3017-E,13
+03/09/2019,07:15,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3612-E,7
+03/09/2019,07:15,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3613-E,13
+03/09/2019,07:30,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3017-E,2
+03/09/2019,10:30,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3601-E,13
+03/09/2019,10:30,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3999-E,2
+03/09/2019,10:45,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3601-E,15
+03/09/2019,10:45,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3999-E,2
+03/09/2019,12:00,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3601-E,15
+03/09/2019,12:00,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3613-E,1
+03/09/2019,12:00,SubscriptionManagement_V1_0.getSubscription,subscriptionmanagement-54-3999-E,3
+03/09/2019,14:00,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3017-E,4
+03/09/2019,14:00,ManageAddOn_1_0.removeAddOn_2,manageaddon-3-3613-E,9

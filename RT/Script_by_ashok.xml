@@ -1,0 +1,137 @@
+#!/bin/bash
+#####################################################################################
+#                        S C R I P T    H E A D E R                                 #
+#####################################################################################
+# PROGRAM       : PerformanceLogAnalyser.sh                                                                 #
+# DESCRIPTION   : This script will search logs for soaIds present in soaid.txt          #
+#                 (/usr/ie/adapter/script/input/) and invoke PerformanceAnalyser.jar#
+#                                 for further analysis. The script logs can be found at             #
+#                                 /usr/ie/adapter/script/log/script.log                                                     #
+# ARGUMENTS     : Adapter log path                                                  #
+# USAGE         : PerformanceLogAnalyser.sh                                             #
+# Author        : Vijeth K                                                                                                                  #
+#####################################################################################
+
+#Paths used in script
+SOAID_PATH=/usr/ie/adapter/script/input/soaid.txt
+OuptutCSV_PATH=/usr/ie/adapter/script/outputCSV/
+LOGPATH=/usr/ie/adapter/script/tmp/
+AdpLog_Path="$1"
+Jar_Path=/usr/ie/adapter/script/PerformanceAnalyser.jar
+Script_Log=/usr/ie/adapter/script/log/scrpit.log
+gzip='.gz'
+
+result=0
+
+run() {
+
+        if [ "$AdpLog_Path" == "" ]; then
+
+                echo "ERROR : Please provide adapter log path in script arguments"
+                exit
+
+        fi
+
+if [ -f $Jar_Path ]; then
+
+
+echo "Logs are searched from: " $AdpLog_Path
+
+
+FILESIZE=$(wc -c "$Script_Log" | awk '{print $1}')
+FILESIZE_InMB=$(echo "$FILESIZE" 1000000 | awk '{ printf "%f", $1 / $2 }')
+
+        #Archive script log file if file size is greater than 2MB
+        if [ "$FILESIZE_InMB" > 2.0 ]; then
+                echo "INFO : Archiving log file,file size is greater than 2MB"
+                today="$( date +"%Y%m%d" )"
+                number=0
+                fname="$Script_Log"
+
+                while [ -e "$fname" ]; do
+                        printf -v fname -- "/usr/ie/adapter/script/log/scrpit_"'%s-%02d.log' "$today" "$(( ++number ))"
+                done
+
+                echo $fname
+                mv $Script_Log $fname
+                gzip -f $fname
+
+                #rm $Script_Log
+                touch $Script_Log
+        fi
+
+#read soaIDs line by line from SOAID_PATH
+awk '{print}' $SOAID_PATH | while read soaID
+do
+        if [ "$soaID" != "" ]; then
+        TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
+                echo $TIMESTAMP " Analysing logs for given soaID :" "$soaID" >>$Script_Log
+                #search adapter logs for the soaIDs in AdpLog_Path
+                if [[ "$input" =~ $gzip ]]; then
+                        count=$(ls -l | gzgrep -c "$soaID" $AdpLog_Path)
+                        #proceed if logs are present for given soaID
+                        if [ "$count" -gt 0 ]; then
+                        #remove is log is already present
+                                if [ -f $LOGPATH"$soaID".log ]; then
+                                        rm $LOGPATH"$soaID".log
+                                fi
+                        #Store logs for given soaID at LOGPATH
+                                gzgrep "$soaID" $AdpLog_Path >>$LOGPATH"$soaID".log
+                                echo "Making java call for analysis" >>$Script_Log
+                                java -jar $Jar_Path $LOGPATH"$soaID".log "$soaID" >>$Script_Log 2>&1
+                                echo "End of java call" >>$Script_Log
+                                rm $LOGPATH"$soaID".log
+                                TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
+                                echo $TIMESTAMP" Analysis for soaID :" "$soaID" " is complete">>$Script_Log
+                                echo "---------------------------------------------------------">>$Script_Log
+                                #Else skip
+                        else
+                                TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
+                                echo $TIMESTAMP" Could not find logs for soaID: " "$soaID" >>$Script_Log
+                                echo "---------------------------------------------------------">>$Script_Log
+                        fi
+                else
+
+                        count=$(ls -l | grep -c "$soaID" $AdpLog_Path)
+                        #proceed if logs are present for given soaID
+                        if [ "$count" -gt 0 ]; then
+                        #remove is log is already present
+                                if [ -f $LOGPATH"$soaID".log ]; then
+                                        rm $LOGPATH"$soaID".log
+                                fi
+                                #Store logs for given soaID at LOGPATH
+                                grep "$soaID" $AdpLog_Path >>$LOGPATH"$soaID".log
+                                echo "Making java call for analysis" >>$Script_Log
+                                #java -jar $Jar_Path $LOGPATH"$soaID".log "$soaID" >>$Script_Log 2>&1
+                                echo "End of java call" >>$Script_Log
+                                rm $LOGPATH"$soaID".log
+                                TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
+                                echo $TIMESTAMP" Analysis for soaID :" "$soaID" " is complete">>$Script_Log
+                                echo "---------------------------------------------------------">>$Script_Log
+                                #Else skip
+                        else
+                                TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
+                                echo $TIMESTAMP" Could not find logs for soaID: " "$soaID" >>$Script_Log
+                                echo "---------------------------------------------------------">>$Script_Log
+                        fi
+                fi
+        #Else skip
+        else
+                echo "empty line"
+        fi
+done
+else
+        result=1
+fi
+return
+}
+
+echo 'Starting script'
+run
+if [ "$result" -eq 0 ]; then
+        echo "Log analysis is complete, analysis document location "$OuptutCSV_PATH
+else
+ echo "ERROR : Could not find PerformanceAnalyser.jar file!"
+fi
+echo 'Script execution ended'
+exit

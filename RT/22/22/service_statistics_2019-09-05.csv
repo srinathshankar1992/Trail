@@ -1,0 +1,8 @@
+Server,Transactions
+Total,0
+
+Date,Time,Application,Service,No. of Requests,Min Time(ms),Max Time(ms),Avg Time(ms)
+
+Service Name,Cache hits,Cache misses,%ge of hit 
+
+Date,Time,Service,Error,Count

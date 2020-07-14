@@ -1,0 +1,52 @@
+Generate RT Reports:
+
+For generating on 04042018 with yesterday's(20180403) file statistics:
+
+Login to server 10.142.15.22
+
+Go to archive log dir:
+
+
+cd /usr/ie/mis_log_archive/ManagedServer/Services_Logs/20180404 
+
+
+System.log.2019-09-02.1.gz
+System.log.2019-09-02.2.gz
+System.log.2019-09-02.3.gz
+
+cat System.log.2019-09-02.1 System.log.2019-09-02.2. System.log.2019-09-02.3 > System.log.2019-09-02.1.gz
+
+
+
+alias archive="cd /usr/ie/mis_log_archive/ManagedServer/Services_Logs"
+
+
+(Incase the dir isn't there create a dir(20180404) and copy log file (System.log.2018-04-03.1) to 20180404 dir)
+
+"mkdir folder name"
+
+cd foldername(cd 20190431)
+"cp file name folder path"(cp System.log.2019-05-01.1 /usr/ie/mis_log_archive/ManagedServer/Services_Logs/20190431/)
+
+Zip the log file in case its not done
+gzip System.log.2018-04-03.1
+
+Go to script location:
+RTScript (cd /export/home/wlapp/tools/jobs/Statistics_Report_Scripts/)
+
+run soa_daily_report_nob.pl with the date for which you need the reports
+./soa_daily_report_nob.pl 03/04/2018
+
+Go to log location :/export/home/wlapp/tools/jobs/Statistics_Report_Scripts/logs 
+alias RTscript cd /export/home/wlapp/tools/jobs/Statistics_Report_Scripts/logs
+
+transfer the service_statistics_2018-04-03.csv generated file via WINSCP to local
+
+open with EXCEL and keep the formatting as any of the earlier reports. 
+
+ 
+
+Repeat the same steps in 10.142.15.23.
+
+
+cat System.log.2019-07-09.1 System.log.2019-07-09.2 System.log.2019-07-09.3 >srinath

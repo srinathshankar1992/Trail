@@ -1,0 +1,192 @@
+getBillDetails_1
+
+72131cc4-3fcc-4570-9859-c240df071834
+
+
+
+Total : 147 
+Backend time: 12 ms
+SOA time: 121
+network delay 14 
+
+
+
+
+
+
+<l:event dateTime="2019-05-24 06:22:05.648" layerName="OSB" processName="O2IE_ManageBillDetails_1_0.getBillDetails_1" eventType="BEGIN" eventStatus="" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"><o2ie:getBillDetails_1 xmlns:o2ie="http://soa.o2.ie/o2ie_managebilldetailsdata_1_0" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">         <o2ie:accountNumber>100151581</o2ie:accountNumber>         <o2ie:subscriberType>POSTPAY</o2ie:subscriberType>      </o2ie:getBillDetails_1></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.671" layerName="OSB" processName="O2IE_ManageBillDetails_1_0.getBillDetails_1" eventType="OUTBOUND" eventStatus="" eventCode="" outboundServiceName="CustomerBillManagement_V1_0.customerBill" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.681" layerName="OSB" processName="CustomerBillManagement_V1_0.customerBill" eventType="ENTRY" eventStatus="" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.701" layerName="OSB" processName="CustomerBillManagement_V1_0.customerBill" eventType="OUTBOUND" eventStatus="" eventCode="" outboundServiceName="CustomerBillManagementAdapter_V1_0.customerBill" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.736" layerName="OSB" processName="CustomerBillManagement_V1_0.customerBill" eventType="INBOUND" eventStatus="SUCCESS" eventCode="" outboundServiceName="CustomerBillManagementAdapter_V1_0.customerBill" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.768" layerName="OSB" processName="CustomerBillManagement_V1_0.customerBill" eventType="EXIT" eventStatus="SUCCESS" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.771" layerName="OSB" processName="O2IE_ManageBillDetails_1_0.getBillDetails_1" eventType="INBOUND" eventStatus="SUCCESS" eventCode="" outboundServiceName="CustomerBillManagement_V1_0.customerBill" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"></l:event>
+
+<l:event dateTime="2019-05-24 06:22:05.795" layerName="OSB" processName="O2IE_ManageBillDetails_1_0.getBillDetails_1" eventType="END" eventStatus="SUCCESS" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="UNKNOWN" providerID="threeie" originatorIP="" SOAConsumerTransactionID="" SOATransactionID="72131cc4-3fcc-4570-9859-c240df071834"><o2ie:getBillDetails_1Response xmlns:o2ie="http://soa.o2.ie/o2ie_managebilldetailsdata_1_0" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><o2ie:result><cor:statusCode xmlns:cor="http://soa.o2.ie/coredata_1_0">managebilldetails-18-0000-S</cor:statusCode><cor:externalDescription xmlns:cor="http://soa.o2.ie/coredata_1_0">Request processed successfully with all the details.</cor:externalDescription><cor:internalDescription xmlns:cor="http://soa.o2.ie/coredata_1_0">Request processed successfully with all the details.</cor:internalDescription></o2ie:result><o2ie:billDetails><o2ie:billDate>2019-03-01</o2ie:billDate><o2ie:invoiceDate>2019-03-01</o2ie:invoiceDate><o2ie:billPaymentDetails><o2ie:billHistoryType>CURRENT</o2ie:billHistoryType><o2ie:billPaymentDate>2019-02-12</o2ie:billPaymentDate><o2ie:billAmountPaid>6000</o2ie:billAmountPaid></o2ie:billPaymentDetails><o2ie:billPaymentDetails><o2ie:billHistoryType>PREV</o2ie:billHistoryType><o2ie:billPaymentDate>2019-01-15</o2ie:billPaymentDate><o2ie:billAmountPaid>6000</o2ie:billAmountPaid></o2ie:billPaymentDetails><o2ie:billPaymentDetails><o2ie:billHistoryType>PREVTOPREV</o2ie:billHistoryType><o2ie:billPaymentDate>2018-12-12</o2ie:billPaymentDate><o2ie:billAmountPaid>8338</o2ie:billAmountPaid></o2ie:billPaymentDetails><o2ie:transactionCurrency>EUR</o2ie:transactionCurrency><o2ie:amountDue>6000</o2ie:amountDue><o2ie:paymentDueDate>2019-03-15</o2ie:paymentDueDate></o2ie:billDetails></o2ie:getBillDetails_1Response></l:event>
+
+
+24 May 2019 06:22:05,703 CustomerBillManagementRestController  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834  Entering Method : customerBill(..)
+24 May 2019 06:22:05,704 CustomerBillManagementRestController  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Invoking ENSApiImp billDetails()
+24 May 2019 06:22:05,704 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834  Entering Method : billDetails(..)
+24 May 2019 06:22:05,704 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 CustomerBillRequestVO : CustomerBillRequestVO [ban=100151581]
+24 May 2019 06:22:05,705 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Getting session
+24 May 2019 06:22:05,706 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Entering getBillDetailsServices()
+24 May 2019 06:22:05,713 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Successfully got session
+
+24 May 2019 06:22:05,713 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Invoking backend method billDetails()
+24 May 2019 06:22:05,725 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 Successfully invoked backend method billDetails()
+24 May 2019 06:22:05,725 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 amdocs.APILink.soa.datatypes.LatestBillResponseInfo@1 {
+24 May 2019 06:22:05,726 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 date2019-02-12 00:00:00
+24 May 2019 06:22:05,726 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 date2019-01-15 00:00:00
+24 May 2019 06:22:05,727 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 date2018-12-12 00:00:00
+24 May 2019 06:22:05,728 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 billDetails response : CustomerBillResponseVO [id=100151581, billDate=Fri Mar 01 00:00:00 GMT 2019, paymentDueDate=Fri Mar 15 00:00:00 GMT 2019, totalDueAmt=60, appliedPayment=[AppliedPaymentVO [appliedAmount=null, payment=PaymentVO [id=null, href=null, paymentDate=Tue Feb 12 00:00:00 GMT 2019, amount=AmountVO [value=60.0], refferedType=null]], AppliedPaymentVO [appliedAmount=null, payment=PaymentVO [id=null, href=null, paymentDate=Tue Jan 15 00:00:00 GMT 2019, amount=AmountVO [value=60.0], refferedType=null]], AppliedPaymentVO [appliedAmount=null, payment=PaymentVO [id=null, href=null, paymentDate=Wed Dec 12 00:00:00 GMT 2018, amount=AmountVO [value=83.38], refferedType=null]]]]
+24 May 2019 06:22:05,730 ENSApiImpl  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834  Exiting Method : billDetails(..)
+24 May 2019 06:22:05,730 CustomerBillManagementRestController  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834 SuccessFully invoked ENSApiImp billDetails()
+24 May 2019 06:22:05,730 CustomerBillManagementRestController  INFO- SOAID: 72131cc4-3fcc-4570-9859-c240df071834  Exiting Method : customerBill()(..)
+
+
+
+
+getUpgradeEligibility
+
+ASM: 48
+Backend: 1450
+Total : 2891
+Backend: 1498
+network: 1325 
+SOA:68
+
+
+
+
+
+
+
+Soa logs:
+==========
+
+<l:event dateTime="2019-05-24 05:59:17.608" layerName="OSB" processName="ManageUpgrade_1_0.getUpgradeEligibility" eventType="BEGIN" eventStatus="" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="soaag" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="93abb648-fd1d-4708-950a-a0ccd3ed47d9"><man:getUpgradeEligibility xmlns:man="http://soa.o2.ie/manageupgradedata_1_0" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">  <!--You have a CHOICE of the next 2 items at this level-->  <man:msisdn>353830741385</man:msisdn>  <man:serviceType>POSTPAY</man:serviceType></man:getUpgradeEligibility></l:event>
+<l:event dateTime="2019-05-24 05:59:17.657" layerName="OSB" processName="ManageUpgrade_1_0.getUpgradeEligibility" eventType="OUTBOUND" eventStatus="" eventCode="" outboundServiceName="AmdocsOMS.getUpgradeEligibility" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="soaag" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="93abb648-fd1d-4708-950a-a0ccd3ed47d9"></l:event>
+<l:event dateTime="2019-05-24 05:59:20.480" layerName="OSB" processName="ManageUpgrade_1_0.getUpgradeEligibility" eventType="INBOUND" eventStatus="SUCCESS" eventCode="" outboundServiceName="AmdocsOMS.getUpgradeEligibility" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="soaag" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="93abb648-fd1d-4708-950a-a0ccd3ed47d9"></l:event>
+<l:event dateTime="2019-05-24 05:59:20.499" layerName="OSB" processName="ManageUpgrade_1_0.getUpgradeEligibility" eventType="END" eventStatus="SUCCESS" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="soaag" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="93abb648-fd1d-4708-950a-a0ccd3ed47d9"><man:getUpgradeEligibilityResponse xmlns:man="http://soa.o2.ie/manageupgradedata_1_0" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">  <man:accountNumber>346041674</man:accountNumber>  <man:isEligible>YES</man:isEligible>  <man:qualifyingSpend>0</man:qualifyingSpend>  <man:qualifyingTenure>0</man:qualifyingTenure>  <man:availableUpgrades>0</man:availableUpgrades>  <man:subscriberEligibility>    <man:eligibility>      <man:msisdn>353830741385</man:msisdn>      <man:approved>true</man:approved>      <man:approvedPlanId>0</man:approvedPlanId>      <man:approvedFCV>0</man:approvedFCV>      <man:lastUpgradedOn>2019-05-24</man:lastUpgradedOn>      <man:activeDuration>0</man:activeDuration>    </man:eligibility>  </man:subscriberEligibility></man:getUpgradeEligibilityResponse></l:event>
+==============================
+
+Actual Backend Adapter logs:
+==========
+
+24 May 2019 05:59:17,682 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Entering Method : getUpgradeEligibility(..)
+24 May 2019 05:59:17,684 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Entering Method : getAsmToken(..)
+24 May 2019 05:59:17,711 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Amdocssecuritymanagement_v1_0PortTypeProxy is available
+24 May 2019 05:59:17,713 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 SOATransactionID is set
+24 May 2019 05:59:17,718 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Invoking Amdocssecuritymanagement_v1_0PortTypeProxy.authentication()
+24 May 2019 05:59:17,739  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Entering authentication()
+24 May 2019 05:59:17,744  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 SoaId : 93abb648-fd1d-4708-950a-a0ccd3ed47d9
+24 May 2019 05:59:17,744  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 ASM WS EndPoint : http://172.16.117.132:25001/asm3_jaxws_v0-wls-secured/amdocs.uams.sessions.interfaces.api.ASM3LoginServices?WSDL
+24 May 2019 05:59:17,744  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 ASM WS Timeout in ms : 5000
+24 May 2019 05:59:17,744  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 userId : 333333, password : *******, appId : null, env : null, flag : false
+24 May 2019 05:59:17,748  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 keyForCache : 333333*******
+24 May 2019 05:59:17,748  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Invoking CachingManager
+24 May 2019 05:59:17,748  CachingManager  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Entering Method : getTokenFromCache(..)
+24 May 2019 05:59:17,752  CachingManager  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Exiting Method : getTokenFromCache(..)
+24 May 2019 05:59:17,752  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 asmToken obtained from cache = EXT<Tksmau7JQwgiaWT{edpbaoLhyPztENZkJgkVwl20;appId=;>
+24 May 2019 05:59:17,756  amdocssecuritymanagement_v1_0_amdocssecuritymanagement_v1_0PortTypeImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Exiting authentication()
+24 May 2019 05:59:17,766 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Successfully Invoked Amdocssecuritymanagement_v1_0PortTypeProxy.authentication()
+24 May 2019 05:59:17,769 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 ASM Token: EXT<Tksmau7JQwgiaWT{edpbaoLhyPztENZkJgkVwl20;appId=;>
+24 May 2019 05:59:17,770 AsmTokenImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Exiting Method : getAsmToken(..)
+24 May 2019 05:59:17,770 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 CheckUpgradeEligibilityRequestVO [localeString=EN, salesChannel=CC, msisdn=0830741385, securityToken=EXT<Tksmau7JQwgiaWT{edpbaoLhyPztENZkJgkVwl20;appId=;>]
+24 May 2019 05:59:17,775 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Invoking omsImplObj.getUpgradeEligiblity
+24 May 2019 05:59:17,776 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Entering Method : getUpgradeEligiblity(..)
+24 May 2019 05:59:17,781 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Getting InitialContext
+24 May 2019 05:59:17,795 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 InitialContext is available
+24 May 2019 05:59:17,795 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Getting checkUpgradeEligibilitySvc EJB object
+24 May 2019 05:59:18,985 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 checkUpgradeEligibilitySvc EJB object is available
+24 May 2019 05:59:18,986 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 MSISDN: 0830741385, OrderingContext[SecurityToken: EXT<Tksmau7JQwgiaWT{edpbaoLhyPztENZkJgkVwl20;appId=;>, LocaleString: EN, SalesChannel: CC]
+24 May 2019 05:59:18,987 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 omsHitCount: 0, isValidInvocation: false
+24 May 2019 05:59:18,987 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Invoking EJB method checkUpgradeEligibilitySvc
+24 May 2019 05:59:20,437 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Successfully Invoked EJB method checkUpgradeEligibilitySvc
+24 May 2019 05:59:20,437 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 CheckUpgradeEligibilityResponse.ErrorCodeX9: null, ErrorDescriptionX9: null
+24 May 2019 05:59:20,438 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 CheckUpgradeEligibiltyResponseVO [CustomerId=346041674, Is_Eligible=true, MSISDN=0830741385, UpgradeEligibilityDate=Fri May 24 06:01:52 IST 2019, ErrorCode=null, ErrorDescription=null, Status=SUCCESS, ReasonForIneligibility=null]
+24 May 2019 05:59:20,438 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Exiting Try block
+24 May 2019 05:59:20,440 OMSApiImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Exiting Method : getUpgradeEligiblity(..)
+24 May 2019 05:59:20,442 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 Done omsImplObj.getUpgradeEligiblity
+24 May 2019 05:59:20,442 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9 inside date null
+24 May 2019 05:59:20,444 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Entering Method : dateToXMLGregorian, Date : Fri May 24 06:01:52 IST 2019(..)
+24 May 2019 05:59:20,449 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Exiting Method : dateToXMLGregorian, XMLGregorianCalendar : 2019-05-24T06:01:52.000+01:00(..)
+24 May 2019 05:59:20,453 manageupgrade_1_0_manageupgrade_1_0SoapPortImpl  INFO- SOAID: 93abb648-fd1d-4708-950a-a0ccd3ed47d9  Exiting Method : getUpgradeEligibility(..)
+
+
+getPermissions
+
+
+
+createShipment
+
+Total: 945 MS
+
+Backend: 810
+
+SOA : 135 ms
+
+
+<l:event dateTime="2019-05-24 05:47:49.95" layerName="OSB" processName="ManageOrderShipment_V1_0.createShipment" eventType="BEGIN" eventStatus="" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="thbs" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="cd6963d4-4239-4767-a283-3f9f44571287"><ResourceLog>  <http:relative-URI xmlns:http="http://www.bea.com/wli/sb/transports/http">createShipment</http:relative-URI>  <http:http-method xmlns:http="http://www.bea.com/wli/sb/transports/http">POST</http:http-method>  <http:query-parameters xmlns:http="http://www.bea.com/wli/sb/transports/http"/>  <customHttpHeaders>    <tran:user-header name="applicationID" value="thbs" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:tran="http://www.bea.com/wli/sb/transports"/>  </customHttpHeaders>  <payload>    <man:createShipmentRequest xmlns:man="http://www.three.middleware.services.com/3im/schema/manageordershipmentdata_v1_0">      <man:customerOrderDetails>        <!--Optional:-->        <man:transactionId>012312345241155</man:transactionId>        <man:orderNumber>12345241155</man:orderNumber>        <man:orderDate>2018-04-28T03:24:36</man:orderDate>        <man:orderGrossPrice>6800</man:orderGrossPrice>        <man:orderDiscount>100</man:orderDiscount>        <man:orderNetPrice>6700</man:orderNetPrice>        <!--Optional:-->        <man:orderShipmentNotes>Message to be sent</man:orderShipmentNotes>        <man:dealerCode>O288</man:dealerCode>        <man:customerDetails>          <man:title>**</man:title>          <man:firstName>****</man:firstName>          <!--Optional:-->          <man:middleName>*****</man:middleName>          <man:lastName>*****</man:lastName>          <!--Optional:-->          <man:emailAddress>********************</man:emailAddress>          <!--Optional:-->          <man:additionalTitle>**</man:additionalTitle>          <man:contactNumber>**********</man:contactNumber>        </man:customerDetails>        <man:deliveryType>REGISTERED</man:deliveryType>        <!--Optional:-->        <man:invoiceAddress>          <man:addressLine1>***************</man:addressLine1>          <man:addressLine2>****************</man:addressLine2>          <!--Optional:-->          <man:addressLine3>*</man:addressLine3>          <!--Optional:-->          <man:town>******</man:town>          <man:county>********</man:county>          <!--Optional:-->          <man:eirCode>*****</man:eirCode>          <man:country>*******</man:country>        </man:invoiceAddress>        <man:shippingAddress>          <man:addressLine1>***************</man:addressLine1>          <man:addressLine2>****************</man:addressLine2>          <!--Optional:-->          <man:addressLine3>*</man:addressLine3>          <!--Optional:-->          <man:town>******</man:town>          <man:county>********</man:county>          <!--Optional:-->          <man:eirCode>*****</man:eirCode>          <man:country>*******</man:country>        </man:shippingAddress>        <!--1 or more repetitions:-->        <man:orderItemDetails>          <man:orderItemId>1234768</man:orderItemId>          <!--1 or more repetitions:-->          <man:productDetails>            <man:productName>IPHONE</man:productName>            <man:sKU>APPLE8PLUS-8008</man:sKU>            <man:serviceType>PREPAY</man:serviceType>            <man:orderType>UPGRADE</man:orderType>            <man:lineItemId>54890</man:lineItemId>            <man:price>6700</man:price>            <!--Optional:-->            <man:shippingDetails>              <!--Optional:-->              <man:isgiftWrapped>true</man:isgiftWrapped>              <!--Optional:-->              <man:shipToStore>false</man:shipToStore>              <!--Optional:-->              <man:giftWrapMessage>Happy Birthday</man:giftWrapMessage>              <!--Optional:-->              <man:isUpdate>false</man:isUpdate>              <!--Optional:-->              <man:isCancelled>false</man:isCancelled>            </man:shippingDetails>          </man:productDetails>        </man:orderItemDetails>      </man:customerOrderDetails>    </man:createShipmentRequest>  </payload></ResourceLog></l:event>
+<l:event dateTime="2019-05-24 05:47:49.185" layerName="OSB" processName="ManageOrderShipment_V1_0.createShipment" eventType="OUTBOUND" eventStatus="" eventCode="" outboundServiceName="createShipmentToQORUS.SendToRCI" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="thbs" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="cd6963d4-4239-4767-a283-3f9f44571287"></l:event>
+<l:event dateTime="2019-05-24 05:47:49.995" layerName="OSB" processName="ManageOrderShipment_V1_0.createShipment" eventType="INBOUND" eventStatus="SUCCESS" eventCode="" outboundServiceName="createShipmentToQORUS.SendToRCI" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="thbs" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="cd6963d4-4239-4767-a283-3f9f44571287"></l:event>
+<l:event dateTime="2019-05-24 05:47:50.40" layerName="OSB" processName="ManageOrderShipment_V1_0.createShipment" eventType="END" eventStatus="SUCCESS" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax02/10.142.4.19/soa_server2" applicationID="thbs" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="cd6963d4-4239-4767-a283-3f9f44571287"><man:createShipmentResponse xmlns:man="http://www.three.middleware.services.com/3im/schema/manageordershipmentdata_v1_0">  <man:SOATransactionID>cd6963d4-4239-4767-a283-3f9f44571287</man:SOATransactionID>  <man:orderNumber>12345241155</man:orderNumber>  <man:timeStamp>2019-05-24T05:47:49</man:timeStamp></man:createShipmentResponse></l:event>
+
+
+notifyCustomer
+
+Total : 429
+Backend: 41 ms
+SOA: 388 MS
+
+<l:event dateTime="2019-05-24 06:33:40.885" layerName="OSB" processName="Communication_V1_0.notifyCustomer" eventType="BEGIN" eventStatus="" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax01/10.142.4.18/soa_server1" applicationID="THBS" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="657650df-446b-4c76-9895-6fa76925d601"><ResourceLog><http:relative-URI xmlns:http="http://www.bea.com/wli/sb/transports/http">notifyCustomer</http:relative-URI><http:http-method xmlns:http="http://www.bea.com/wli/sb/transports/http">POST</http:http-method><http:query-parameters xmlns:http="http://www.bea.com/wli/sb/transports/http"/><customHttpHeaders><tran:user-header name="applicationID" value="THBS" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:tran="http://www.bea.com/wli/sb/transports"/></customHttpHeaders><payload>{&#13;  "communicationMessage": {&#13;    "id": "353833737129",&#13;    "Type": "DUAL-ANM",&#13;    "Subject": "Thanks for registering. Here is your verification code to enter online: &amp;amp;lt;authCode>",&#13;    "characteristic": [&#13;      {&#13;        "name": "verificationCode",&#13;        "value": "soaTEST"&#13;      },&#13;      {&#13;        "name": "eventId",&#13;        "value": "three.soa.registrition.success"&#13;      },&#13;      {&#13;        "name": "contact_name",&#13;        "value": "sufiya"&#13;      },&#13;      {&#13;        "name": "URL",&#13;        "value": "tttt"&#13;      },&#13;      {&#13;        "name": "eventId",&#13;        "value": "three.soa.registration.email"&#13;      }&#13;    ],&#13;    "sender": {&#13;      "type": "string",&#13;      "basetype": "string",&#13;      "schemaLocation": "string",&#13;      "email": "blr@domain.com",&#13;      "id": "string",&#13;      "name": "string",&#13;      "phoneNumber": "353123456789"&#13;    },&#13;    "receiver": {&#13;      "type": "EMAIL",&#13;      "email": "blr@domain.com",&#13;      "id": "353831611110",&#13;      "name": "string",&#13;      "phoneNumber": "353921922332"&#13;    },&#13;    "relatedParty": {&#13;      "referredType": "string",&#13;      "href": "string",&#13;      "id": "string",&#13;      "name": "string",&#13;      "role": "string"&#13;    },&#13;    "attachment": {&#13;      "type": "SMS",&#13;      "basetype": "string",&#13;      "schemaLocation": "string",&#13;      "name": "string",&#13;      "path": "string",&#13;      "description": "string",&#13;      "href": "string",&#13;      "mimeType": "string",&#13;      "size": 0,&#13;      "sizeUnit": 0,&#13;      "url": "string",&#13;      "validFor": "string"&#13;    }&#13;  }&#13;}</payload></ResourceLog></l:event>
+<l:event dateTime="2019-05-24 06:33:41.8" layerName="OSB" processName="Communication_V1_0.notifyCustomer" eventType="OUTBOUND" eventStatus="" eventCode="" outboundServiceName="ANM.bulkPush" serverHostIP="ieo2wlzsoax01/10.142.4.18/soa_server1" applicationID="THBS" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="657650df-446b-4c76-9895-6fa76925d601"></l:event>
+<l:event dateTime="2019-05-24 06:33:41.49" layerName="OSB" processName="Communication_V1_0.notifyCustomer" eventType="INBOUND" eventStatus="SUCCESS" eventCode="" outboundServiceName="ANM.bulkPush" serverHostIP="ieo2wlzsoax01/10.142.4.18/soa_server1" applicationID="THBS" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="657650df-446b-4c76-9895-6fa76925d601"></l:event>
+<l:event dateTime="2019-05-24 06:33:41.314" layerName="OSB" processName="Communication_V1_0.notifyCustomer" eventType="END" eventStatus="SUCCESS" eventCode="" outboundServiceName="" serverHostIP="ieo2wlzsoax01/10.142.4.18/soa_server1" applicationID="THBS" providerID="threeie" originatorIP="10.142.4.57" SOAConsumerTransactionID="" SOATransactionID="657650df-446b-4c76-9895-6fa76925d601"><soapenv:Body xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">{"SOATransactionID":"657650df-446b-4c76-9895-6fa76925d601","eventDetails":[{"eventType":"SMS","eventTime":"2019-05-24T06:33:41.266","eventId":"three.soa.registration.email","eventStatus":"SUCCESS"},{"eventType":"EMAIL","eventTime":"2019-05-24T06:33:41.266","eventId":"three.soa.registration.email","eventStatus":"SUCCESS"}]}</soapenv:Body></l:event>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
